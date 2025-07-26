@@ -1,0 +1,41 @@
+#:kivy 2.1.0
+
+<Car>:
+    size: 60, 60  # Increased car size from 30 to 40
+    canvas:
+        PushMatrix
+        Rotate:
+            angle: self.angle
+            origin: self.center
+        Rectangle:
+            source: 'car4.png'
+            pos: self.pos
+            size: self.size
+        PopMatrix
+
+<Ball1>:
+    size: 10, 10  # Increased sensor ball size from 5 to 10
+    canvas:
+        Color:
+            rgba: 1, 0, 0, 1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Ball2>:
+    size: 10, 10  # Increased sensor ball size from 5 to 10
+    canvas:
+        Color:
+            rgba: 0, 1, 1, 1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Ball3>:
+    size: 10, 10  # Increased sensor ball size from 5 to 10
+    canvas:
+        Color:
+            rgba: 1, 1, 0, 1
+        Ellipse:
+            pos: self.pos
+            size: self.size
